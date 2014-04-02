@@ -8,7 +8,7 @@ var DemoGrid = {
         '<li>' +
           '<div class="inner">' +
             '<div class="controls">' +
-              '<a href="#zoom1" class="resize" data-size="4">1x</a>' +
+              '<a href="#zoom1" class="resize" data-size="1">1x</a>' +
               '<a href="#zoom2" class="resize" data-size="2">2x</a>' +
               '<a href="#zoom3" class="resize" data-size="3">3x</a>' +
             '</div>' +
