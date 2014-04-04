@@ -44,6 +44,7 @@ body {
     left: 10px;
     right: 0;
     -webkit-transition: background 3s;
+    -webkit-animation: try1 5s linear 2s infinite alternate;
   }
   .grid li.changed .inner {
     background: #ffff66;
@@ -104,3 +105,12 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
+  @-webkit-keyframes try1
+{
+0%   {background: red; left:0px; top:0px;}
+25%  {background: yellow; left:200px; top:0px;}
+50%  {background: blue; left:200px; top:200px;}
+75%  {background: green; left:0px; top:200px;}
+100% {background: red; left:0px; top:0px;}
+}
+
