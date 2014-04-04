@@ -46,7 +46,7 @@ body {
     -webkit-transition: background 3s;
     
   }
-  .grid li .inner:hover {
+  .grid li:hover .inner {
   -webkit-animation: try1 5s linear 2s infinite alternate;
   }
   .grid li.changed .inner {
