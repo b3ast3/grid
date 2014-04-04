@@ -4,10 +4,10 @@
   font-family: sans-serif;
 }
 body {
-  background: #E5E5E5;
+  background: #ffffff;
 }
 .grid-container {
-  position: absolute;
+  position: relative;
   top: 66px;
   left: 0;
   right: 10px;
@@ -16,7 +16,8 @@ body {
   overflow-y: hidden;
 }
 .grid {
-  position: relative;
+x-position: absolute;
+y-position: relative;
   height: 100%;
   list-style: none;
   /* Will be modified by the grid jquery lib, depending on the items */
@@ -32,23 +33,31 @@ body {
                         left 0.2s,
                         width 0.2s,
                         height 0.2s,
-                        font-size 0.2s,
+                        font-size 0.5s,
                         line-height 0.2s;
   }
   .grid li .inner {
     position: absolute;
-    background: #fff;
-    border: 1px solid #bbb;
+    background: #1ba1e2;
+    border: none;
     top: 0;
     bottom: 10px;
     left: 10px;
     right: 0;
-    -webkit-transition: background 3s;
+    -webkit-transition: background 0.1s;
   }
   .grid li.changed .inner {
-    background: #ffff66;
-    -webkit-transition: none;
+    background: #fa6800;
   }
+	.grid li .inner:hover {
+	-webkit-animation-name:inner;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:2;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-direction:alternate;
+	-webkit-animation-play-state:running;
+  }
+
   .grid li.ui-draggable-dragging {
     -webkit-transition: none;
   }
@@ -56,8 +65,8 @@ body {
     -webkit-transition: none;
   }
     .grid li.position-highlight .inner {
-      border: none;
-      background: #ccc;
+      border: 1px solid #fff;
+      background: #a4c400;
     }
   .grid .controls {
     position: absolute;
@@ -74,7 +83,7 @@ body {
       float: left;
       margin: 5px 5px 0 0;
       padding: 0.3em;
-      background: #fafafa;
+      background: #6d8764;
       color: #444;
       text-decoration: none;
     }
@@ -87,15 +96,15 @@ body {
 
 .header {
   height: 55px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0px solid #ccc;
 }
   .header .button {
     float: left;
     width: 40px;
     height: 40px;
-    margin: 6px 0 0 10px;
+    margin: 6px 0 0 12px;
     border: solid 1px #ccc;
-    background: #fafafa;
+    background: #60a917;
     color: #000;
     font-size: 18px;
     line-height: 40px;
@@ -103,4 +112,59 @@ body {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    -webkit-transition:width 1s, height 2s;
+    
   }
+.header .new {
+resize:both;
+overflow:auto;
+    float: left;
+    width: 400px;
+    height: 40px;
+    margin: 6px 0 0 10px;
+    border: solid 1px #ccc;
+    background: #60a917;
+    color: #000;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition:width 1s, height 2s;
+    
+  }
+.header .new .try{
+font-size:10px;
+}
+.header .new .try:hover{
+font-size:30px;
+-webkit-animation-name:myfirst;
+-webkit-animation-duration:1s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:linear;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+}
+@-webkit-keyframes myfirst
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+@-webkit-keyframes inner
+{
+0%   {background:red;}
+25%  {background:yellow;}
+50%  {background:blue;}
+75%  {background:green;}
+100% {background:red;}
+}
+.header .button:hover{
+width:80px;
+height:80px;
+font-size: 36px;
+background: #6a00ff;
+}
