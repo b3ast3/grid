@@ -7,9 +7,17 @@
   <script src="src/gridList.js"></script>
   <script src="src/jquery.gridList.js"></script>
   <script src="demo/load.js"></script>
+  <script>
+    function myass()
+    {
+     document.getElementById("ass").innerHTML =""; 
+    }
+    
+  </script>
 </head>
 <body>
-  <div class="header">
+  <div id="ass" class="header">
+  <button type="button" onmouseout="myass()">Try wit</button>
     <a href="#remove-row" class="button remove-row">-</a>
     <a href="#add-row" class="button add-row">+</a>
   </div>
