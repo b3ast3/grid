@@ -7,7 +7,7 @@ body {
   background: #ffffff;
 }
 .grid-container {
-  position: relative;
+  position: absolute;
   top: 66px;
   left: 0;
   right: 10px;
