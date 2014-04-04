@@ -46,8 +46,10 @@ body {
     -webkit-transition: background 3s;
     
   }
-  .grid li:hover .inner {
-  -webkit-animation: try1 5s linear 2s infinite alternate;
+.grid li:hover .inner {
+background: #ff6600;
+opacity:0.8;
+  /*  -webkit-animation: try1 5s linear 2s infinite alternate;*/
   }
   .grid li.changed .inner {
     background: #ffff66;
